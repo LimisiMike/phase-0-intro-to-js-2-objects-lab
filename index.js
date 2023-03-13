@@ -42,10 +42,15 @@ function deleteFromEmployeeByKey(employee, key, value) {
 }
 /////
 //Function#4 - this function Mutates
+// function destructivelyDeleteFromEmployeeByKey(employee, key, value) {
+//     let newEmployee = {employee};
+//     newEmployee[key] = value;
+//     delete newEmployee.key;
+//     // employee = newEmployee;
+//     return newEmployee;
+// }
 function destructivelyDeleteFromEmployeeByKey(employee, key, value) {
-    let newEmployee = {employee};
-    newEmployee[key] = value;
-    delete newEmployee.key;
-    // employee = newEmployee;
-    return newEmployee;
+    employee[key]= value;
+    delete employee.key;
+    return employee;
 }
